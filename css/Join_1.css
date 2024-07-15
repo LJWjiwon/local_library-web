@@ -1,0 +1,148 @@
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    margin: 0;
+}
+
+.container {
+    width: 1410px;
+    height: 750px;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid #d9d9d9;
+    position: relative;
+}
+
+.input-group {
+    position: absolute;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.label {
+    color: #1e1e1e;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.40px;
+}
+
+.input-box {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 16px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #d9d9d9;
+    color: #b3b3b3;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    width: 420px; /* 가로 길이를 더 길게 수정 */
+    position: relative;
+}
+
+.input-box input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    font-size: 16px;
+    color: #1e1e1e;
+}
+
+.dropdown-group {
+    display: flex;
+    gap: 16px;
+}
+
+.dropdown {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 16px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #d9d9d9;
+    color: #b3b3b3;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    gap: 8px;
+    width: 183px; /* 가로 길이 설정 */
+    position: relative; /* 상대적 위치 지정 */
+}
+
+.dropdown .dropdown-text {
+    flex: 1;
+}
+
+.dropdown .dropdown-icon {
+    color: #1e1e1e;
+    position: absolute;
+    right: 12px; /* 우측 여백 설정 */
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    background: #a7683b;
+    border-radius: 8px;
+    border: 1px solid rgba(12, 12, 13, 0.05); /* RGBA 함수 오류 수정 */
+    color: #f5f5f5;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 40px; /* 버튼과 바닥 간격을 더욱 넓혔습니다. */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 423px;
+}
+
+.title {
+    position: absolute;
+    color: black;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 38.40px;
+    word-wrap: break-word;
+    top: 118px; /* 상단 여백을 더욱 조정하여 화면 가운데 위치 */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.radio-group {
+    display: flex;
+    gap: 12px;
+    position: absolute;
+    top: 750px; /* 체크박스 그룹 위치를 조정했습니다. */
+}
+
+.radio-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.radio-box {
+    width: 16px;
+    height: 16px;
+    background: white;
+    border-radius: 4px;
+    border: 1px solid #757575;
+}
+
+.logo {
+    position: absolute;
+    left: 37px;
+    top: 26px;
+    width: 160px;
+    height: 66px;
+}
