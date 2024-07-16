@@ -6,21 +6,22 @@ body {
     height: 100vh;
     background-color: #f5f5f5;
     margin: 0;
+    position: center;
 }
 
 .container {
-    width: 1410px;
-    height: 750px;
+    width: 1500px;
+    height: 830px;
     background-color: white;
     border-radius: 8px;
     border: 1px solid #d9d9d9;
-    position: relative;
+    position: center;
 }
 
 .input-group {
     position: absolute;
-    display: inline-flex;
     flex-direction: column;
+    display: inline-flex;
     gap: 8px;
 }
 
@@ -73,7 +74,7 @@ body {
     line-height: 16px;
     gap: 8px;
     width: 183px; /* 가로 길이 설정 */
-    position: relative; /* 상대적 위치 지정 */
+    position: center; /* 상대적 위치 지정 */
 }
 
 .dropdown .dropdown-text {
@@ -137,6 +138,7 @@ body {
     background: white;
     border-radius: 4px;
     border: 1px solid #757575;
+    
 }
 
 .logo {
