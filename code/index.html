@@ -1,120 +1,84 @@
-<div style="width: 100%; height: 100%; position: relative; background: white">
-    <div style="width: 1200px; height: 567px; padding-top: 96px; padding-bottom: 63px; padding-left: 24px; padding-right: 24px; left: 0px; top: 97px; position: absolute; background-image: url(https://via.placeholder.com/1200x567); flex-direction: column; justify-content: space-between; align-items: center; display: inline-flex">
-        <div style="width: 321px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 8px; display: flex">
-            <div style="align-self: stretch; mix-blend-mode: lighten; text-align: center; color: white; font-size: 72px; font-family: Inter; font-weight: 700; line-height: 86.40px; word-wrap: break-word">헤이! 즐북</div>
-            <div style="align-self: stretch; text-align: center; color: white; font-size: 32px; font-family: Inter; font-weight: 400; line-height: 38.40px; word-wrap: break-word">enjoy your  books life</div>
-        </div>
-        <div style="width: 240px"></div>
-    </div>
-    <div style="width: 1200px; height: 97px; left: 0px; top: 0px; position: absolute">
-        <div style="width: 1200px; height: 97px; left: 0px; top: 0px; position: absolute">
-            <div style="width: 1200px; height: 97px; left: 0px; top: 0px; position: absolute">
-                <div style="width: 1200px; height: 97px; left: 0px; top: 0px; position: absolute; background: white"></div>
-                <div style="width: 83px; height: 31px; left: 1004px; top: 33px; position: absolute; background: #A7683B; border-radius: 10px"></div>
-                <div style="width: 83px; height: 31px; left: 1096.50px; top: 33px; position: absolute; background: white; border-radius: 10px; border: 1px #A7683B solid"></div>
-                <div style="width: 83px; height: 31px; left: 1004px; top: 33px; position: absolute; text-align: center; color: white; font-size: 14px; font-family: Inter; font-weight: 600; line-height: 14px; word-wrap: break-word">로그인</div>
-                <div style="width: 83px; height: 31px; left: 1097px; top: 33px; position: absolute; text-align: center; color: black; font-size: 14px; font-family: Inter; font-weight: 600; line-height: 14px; word-wrap: break-word">회원가입</div>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>헤이!즐넛</title>
+    <link href="/css/index.css" rel="stylesheet">
+    <link href="/css/reset.css" rel="stylesheet">
+</head>
+
+<body>
+<div id="wrap">
+    <div id="header">
+        <div id="header_in">
+            <h1 class="logo"><img src='/images/image 6.png' alt='#' /></h1>
+            <div class="search">
+                <input class="input" type="text" placeholder="검색어를 입력하세요(책 명, 출판사, 키워드 등)" />
+                <div class="input_">
+                    <div class="search_icon"><img src='/images/Icon.png' alt='#' /></div>
+                </div>
             </div>
-            <div style="width: 583px; height: 40px; padding-left: 16px; padding-right: 16px; padding-top: 12px; padding-bottom: 12px; left: 357px; top: 28px; position: absolute; background: white; border-radius: 9999px; overflow: hidden; border: 3px #A7683B solid; justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex">
-                <div style="flex: 1 1 0; color: #B3B3B3; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 16px; word-wrap: break-word">검색어를 입력하세요</div>
-                <div style="width: 16px; height: 16px; position: relative">
-                    <div style="width: 12px; height: 12px; left: 2px; top: 2px; position: absolute; border: 1.60px #1E1E1E solid"></div>
+            <div class="profile">
+                <div class="profile_icon"><img src='/images/user.png' alt='#' /></div>
+                <div class="name">김독자</div>
+                <div class="name_">님</div>
+            </div>
+        </div>
+    </div>
+    <div class="mainlogo">
+        <h4></h4>
+    </div>
+    <div class="booklist">
+        <h3 class="booklist_text">이달의 책</h3>
+        <div class="bookcontainer">
+            <div class="book">1</div>
+            <div class="book">2</div>
+            <div class="book">3</div>
+            <div class="book">4</div>
+        </div>
+    </div>
+    <div class="booklist">
+        <h3 class="booklist_text">화제의 신상</h3>
+        <div class="bookcontainer">
+            <div class="book">1</div>
+            <div class="book">2</div>
+            <div class="book">3</div>
+            <div class="book">4</div>
+        </div>
+    </div>
+    <div class="booklist">
+        <h3 class="booklist_text">추천 도서</h3>
+        <div class="bookcontainer">
+            <div class="book">1</div>
+            <div class="book">2</div>
+            <div class="book">3</div>
+            <div class="book">4</div>
+        </div>
+    </div>
+        <!-- Footer Section -->
+        <div id="footer">
+            <div id="footer_in">
+                <div class="footer_item">
+                    <img src="/images/List.png" alt="도서관 정보" />
+                    <span>도서관 정보</span>
+                </div>
+                <div class="footer_item">
+                    <img src="/images/Search.png" alt="통합검색" />
+                    <span>통합검색</span>
+                </div>
+                <div class="footer_item">
+                    <img src="/images/Home.png" alt="메인화면" />
+                    <span>메인화면</span>
+                </div>
+                <div class="footer_item">
+                    <img src="/images/User (1).png" alt="프로필" />
+                    <span>프로필</span>
+                </div>
+                <div class="footer_item">
+                    <img src="/images/Star.png" alt="랭킹" />
+                    <span>랭킹</span>
                 </div>
             </div>
         </div>
-        <div style="width: 129px; height: 37px; left: 77px; top: 34px; position: absolute; color: black; font-size: 32px; font-family: Inter; font-weight: 400; line-height: 38.40px; word-wrap: break-word">헤이!즐북</div>
-    </div>
-    <div style="width: 1200px; height: 97px; left: -4px; top: 4px; position: absolute">
-        <div style="width: 1200px; height: 97px; left: 0px; top: 0px; position: absolute">
-            <div style="width: 1200px; height: 97px; left: 0px; top: 0px; position: absolute">
-                <div style="width: 1200px; height: 97px; left: 0px; top: 0px; position: absolute; background: white"></div>
-                <div style="width: 83px; height: 31px; left: 1004px; top: 33px; position: absolute; background: #A7683B; border-radius: 10px"></div>
-                <div style="width: 83px; height: 31px; left: 1096.50px; top: 33px; position: absolute; background: white; border-radius: 10px; border: 1px #A7683B solid"></div>
-                <div style="width: 83px; height: 31px; left: 1004px; top: 33px; position: absolute; text-align: center; color: white; font-size: 14px; font-family: Inter; font-weight: 600; line-height: 14px; word-wrap: break-word">로그인</div>
-                <div style="width: 83px; height: 31px; left: 1097px; top: 33px; position: absolute; text-align: center; color: black; font-size: 14px; font-family: Inter; font-weight: 600; line-height: 14px; word-wrap: break-word">회원가입</div>
-            </div>
-            <div style="width: 583px; height: 40px; padding-left: 16px; padding-right: 16px; padding-top: 12px; padding-bottom: 12px; left: 357px; top: 28px; position: absolute; background: white; border-radius: 9999px; overflow: hidden; border: 3px #A7683B solid; justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex">
-                <div style="flex: 1 1 0; color: #B3B3B3; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 16px; word-wrap: break-word">검색어를 입력하세요</div>
-                <div style="width: 16px; height: 16px; position: relative">
-                    <div style="width: 12px; height: 12px; left: 2px; top: 2px; position: absolute; border: 1.60px #1E1E1E solid"></div>
-                </div>
-            </div>
-        </div>
-        <div style="width: 129px; height: 37px; left: 77px; top: 34px; position: absolute; color: black; font-size: 32px; font-family: Inter; font-weight: 400; line-height: 38.40px; word-wrap: break-word">헤이!즐북</div>
-    </div>
-    <div style="width: 127px; height: 51px; left: 62px; top: 732px; position: absolute; color: black; font-size: 29px; font-family: Inter; font-weight: 600; line-height: 29px; word-wrap: break-word">이달의 책</div>
-    <div style="width: 163px; height: 51px; left: 62px; top: 1168px; position: absolute; color: black; font-size: 29px; font-family: Inter; font-weight: 600; line-height: 29px; word-wrap: break-word">화제의 신상</div>
-    <div style="width: 208.80px; height: 304px; left: 54px; top: 802px; position: absolute">
-        <img style="width: 201.98px; height: 270.92px; left: 0px; top: 0px; position: absolute; background: linear-gradient(0deg, #D9D9D9 0%, #D9D9D9 100%)" src="https://via.placeholder.com/202x271" />
-        <div style="width: 201.13px; height: 33.08px; left: 7.67px; top: 270.92px; position: absolute; color: black; font-size: 16px; font-family: Inter; font-weight: 600; line-height: 16px; word-wrap: break-word">탑코너</div>
-    </div>
-    <div style="width: 208.80px; height: 304px; left: 54px; top: 1238px; position: absolute">
-        <img style="width: 201.98px; height: 270.92px; left: 0px; top: 0px; position: absolute; background: linear-gradient(0deg, #D9D9D9 0%, #D9D9D9 100%)" src="https://via.placeholder.com/202x271" />
-        <div style="width: 201.13px; height: 33.08px; left: 7.67px; top: 270.92px; position: absolute; color: black; font-size: 16px; font-family: Inter; font-weight: 600; line-height: 16px; word-wrap: break-word">소녀의 세계</div>
-    </div>
-    <div style="width: 208.80px; height: 304px; left: 274.73px; top: 802px; position: absolute">
-        <img style="width: 201.98px; height: 270.92px; left: 0px; top: 0px; position: absolute; background: linear-gradient(0deg, #D9D9D9 0%, #D9D9D9 100%)" src="https://via.placeholder.com/202x271" />
-        <div style="width: 201.13px; height: 33.08px; left: 7.67px; top: 270.92px; position: absolute; color: black; font-size: 16px; font-family: Inter; font-weight: 600; line-height: 16px; word-wrap: break-word">전지적 독자 시점</div>
-    </div>
-    <div style="width: 208.80px; height: 304px; left: 274.73px; top: 1238px; position: absolute">
-        <img style="width: 201.98px; height: 270.92px; left: 0px; top: 0px; position: absolute; background: linear-gradient(0deg, #D9D9D9 0%, #D9D9D9 100%)" src="https://via.placeholder.com/202x271" />
-        <div style="width: 201.13px; height: 33.08px; left: 7.67px; top: 270.92px; position: absolute; color: black; font-size: 16px; font-family: Inter; font-weight: 600; line-height: 16px; word-wrap: break-word">참교육</div>
-    </div>
-    <div style="width: 208.80px; height: 304px; left: 495.47px; top: 802px; position: absolute">
-        <img style="width: 201.98px; height: 270.92px; left: 0px; top: 0px; position: absolute; background: linear-gradient(0deg, #D9D9D9 0%, #D9D9D9 100%)" src="https://via.placeholder.com/202x271" />
-        <div style="width: 201.13px; height: 33.08px; left: 7.67px; top: 270.92px; position: absolute; color: black; font-size: 16px; font-family: Inter; font-weight: 600; line-height: 16px; word-wrap: break-word">신암행어사</div>
-    </div>
-    <div style="width: 208.80px; height: 304px; left: 495.47px; top: 1238px; position: absolute">
-        <img style="width: 201.98px; height: 270.92px; left: 0px; top: 0px; position: absolute; background: linear-gradient(0deg, #D9D9D9 0%, #D9D9D9 100%)" src="https://via.placeholder.com/202x271" />
-        <div style="width: 201.13px; height: 33.08px; left: 7.67px; top: 270.92px; position: absolute; color: black; font-size: 16px; font-family: Inter; font-weight: 600; line-height: 16px; word-wrap: break-word">소녀 더 와일즈</div>
-    </div>
-    <div style="width: 208.80px; height: 304px; left: 716.20px; top: 802px; position: absolute">
-        <img style="width: 201.98px; height: 270.92px; left: 0px; top: 0px; position: absolute; background: linear-gradient(0deg, #D9D9D9 0%, #D9D9D9 100%)" src="https://via.placeholder.com/202x271" />
-        <div style="width: 201.13px; height: 33.08px; left: 7.67px; top: 270.92px; position: absolute; color: black; font-size: 16px; font-family: Inter; font-weight: 600; line-height: 16px; word-wrap: break-word">테러맨</div>
-    </div>
-    <div style="width: 208.80px; height: 304px; left: 716.20px; top: 1238px; position: absolute">
-        <img style="width: 201.98px; height: 270.92px; left: 0px; top: 0px; position: absolute; background: linear-gradient(0deg, #D9D9D9 0%, #D9D9D9 100%)" src="https://via.placeholder.com/202x271" />
-        <div style="width: 201.13px; height: 33.08px; left: 7.67px; top: 270.92px; position: absolute; color: black; font-size: 16px; font-family: Inter; font-weight: 600; line-height: 16px; word-wrap: break-word">참교육</div>
-    </div>
-    <div style="width: 208.80px; height: 304px; left: 937px; top: 802px; position: absolute">
-        <img style="width: 201.98px; height: 270.92px; left: 0px; top: 0px; position: absolute; background: linear-gradient(0deg, #D9D9D9 0%, #D9D9D9 100%)" src="https://via.placeholder.com/202x271" />
-        <div style="width: 201.13px; height: 33.08px; left: 7.67px; top: 270.92px; position: absolute; color: black; font-size: 16px; font-family: Inter; font-weight: 600; line-height: 16px; word-wrap: break-word">마음의 소리</div>
-    </div>
-    <div style="width: 208.80px; height: 304px; left: 937px; top: 1238px; position: absolute">
-        <img style="width: 201.98px; height: 270.92px; left: 0px; top: 0px; position: absolute; background: linear-gradient(0deg, #D9D9D9 0%, #D9D9D9 100%)" src="https://via.placeholder.com/202x271" />
-        <div style="width: 201.13px; height: 33.08px; left: 7.67px; top: 270.92px; position: absolute; color: black; font-size: 16px; font-family: Inter; font-weight: 600; line-height: 16px; word-wrap: break-word">머니게임</div>
-    </div>
-    <div style="width: 1200px; left: 0px; top: 1619px; position: absolute; border-top: 1px black solid; justify-content: flex-start; align-items: center; gap: 35px; display: inline-flex">
-        <div style="padding-top: 23px; padding-bottom: 41px; padding-left: 50px; padding-right: 50px; background: rgba(255, 255, 255, 0); flex-direction: column; justify-content: flex-start; align-items: center; gap: 13px; display: inline-flex">
-            <div style="width: 81px; height: 68px; position: relative; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                <div style="width: 60.75px; height: 34px; border: 4px #1E1E1E solid"></div>
-            </div>
-            <div style="text-align: center; color: black; font-size: 23px; font-family: Inter; font-weight: 600; line-height: 23px; word-wrap: break-word">도서관 정보</div>
-        </div>
-        <div style="padding-top: 23px; padding-bottom: 41px; padding-left: 64px; padding-right: 63px; background: rgba(255, 255, 255, 0); flex-direction: column; justify-content: flex-start; align-items: center; gap: 13px; display: inline-flex">
-            <div style="width: 81px; height: 68px; position: relative; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                <div style="width: 60.75px; height: 51px; border: 4px #1E1E1E solid"></div>
-            </div>
-            <div style="text-align: center; color: black; font-size: 23px; font-family: Inter; font-weight: 600; line-height: 23px; word-wrap: break-word">통합검색</div>
-        </div>
-        <div style="width: 212px; height: 168px; position: relative; background: rgba(255, 255, 255, 0)">
-            <div style="width: 154px; height: 151px; left: 29px; top: 7px; position: absolute; background: rgba(246, 185, 97, 0.75); border-radius: 9999px"></div>
-            <div style="width: 81px; height: 68px; left: 66px; top: 23px; position: absolute">
-                <div style="width: 60.75px; height: 56.67px; left: 10.12px; top: 5.67px; position: absolute; border: 4px #1E1E1E solid"></div>
-            </div>
-            <div style="left: 64px; top: 104px; position: absolute; text-align: center; color: black; font-size: 23px; font-family: Inter; font-weight: 600; line-height: 23px; word-wrap: break-word">메인화면</div>
-        </div>
-        <div style="width: 212px; padding-top: 23px; padding-bottom: 41px; padding-left: 66px; padding-right: 65px; background: rgba(255, 255, 255, 0); flex-direction: column; justify-content: flex-start; align-items: center; gap: 13px; display: inline-flex">
-            <div style="width: 81px; height: 68px; position: relative; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                <div style="width: 54px; height: 51px; border: 4px #1E1E1E solid"></div>
-            </div>
-            <div style="text-align: center; color: black; font-size: 23px; font-family: Inter; font-weight: 600; line-height: 23px; word-wrap: break-word">프로필</div>
-        </div>
-        <div style="width: 212px; padding-top: 23px; padding-bottom: 41px; padding-left: 66px; padding-right: 65px; background: rgba(255, 255, 255, 0); flex-direction: column; justify-content: flex-start; align-items: center; gap: 13px; display: inline-flex">
-            <div style="width: 81px; height: 68px; position: relative; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                <div style="width: 67.50px; height: 53.89px; border: 4px #1E1E1E solid"></div>
-            </div>
-            <div style="text-align: center; color: black; font-size: 23px; font-family: Inter; font-weight: 600; line-height: 23px; word-wrap: break-word">랭킹</div>
-        </div>
-    </div>
 </div>
+</body>
+</html>
