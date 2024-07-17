@@ -6,7 +6,6 @@ body {
     height: 100vh;
     background-color: #f5f5f5;
     margin: 0;
-    position: center;
 }
 
 .container {
@@ -15,7 +14,7 @@ body {
     background-color: white;
     border-radius: 8px;
     border: 1px solid #d9d9d9;
-    position: center;
+    position: relative;
 }
 
 .input-group {
@@ -43,7 +42,7 @@ body {
     font-size: 16px;
     font-weight: 400;
     line-height: 16px;
-    width: 420px; /* 가로 길이를 더 길게 수정 */
+    width: 420px;
     position: relative;
 }
 
@@ -73,8 +72,8 @@ body {
     font-weight: 400;
     line-height: 16px;
     gap: 8px;
-    width: 183px; /* 가로 길이 설정 */
-    position: center; /* 상대적 위치 지정 */
+    width: 183px;
+    position: relative;
 }
 
 .dropdown .dropdown-text {
@@ -84,7 +83,33 @@ body {
 .dropdown .dropdown-icon {
     color: #1e1e1e;
     position: absolute;
-    right: 12px; /* 우측 여백 설정 */
+    right: 12px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 100%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.dropdown-content .dropdown-item {
+    padding: 12px 16px;
+    cursor: pointer;
+}
+
+.dropdown-content .dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 .button {
@@ -94,14 +119,14 @@ body {
     padding: 12px;
     background: #a7683b;
     border-radius: 8px;
-    border: 1px solid rgba(12, 12, 13, 0.05); /* RGBA 함수 오류 수정 */
+    border: 1px solid rgba(12, 12, 13, 0.05);
     color: #f5f5f5;
     font-size: 16px;
     font-weight: 400;
     line-height: 16px;
     cursor: pointer;
     position: absolute;
-    bottom: 40px; /* 버튼과 바닥 간격을 더욱 넓혔습니다. */
+    bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
     width: 423px;
@@ -114,7 +139,7 @@ body {
     font-weight: 400;
     line-height: 38.40px;
     word-wrap: break-word;
-    top: 118px; /* 상단 여백을 더욱 조정하여 화면 가운데 위치 */
+    top: 118px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -123,7 +148,7 @@ body {
     display: flex;
     gap: 12px;
     position: absolute;
-    top: 750px; /* 체크박스 그룹 위치를 조정했습니다. */
+    top: 750px;
 }
 
 .radio-label {
@@ -138,7 +163,6 @@ body {
     background: white;
     border-radius: 4px;
     border: 1px solid #757575;
-    
 }
 
 .logo {
