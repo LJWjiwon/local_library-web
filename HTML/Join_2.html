@@ -18,51 +18,51 @@
             <div class="section-title">선호하는 장르를 선택해주세요.</div>
             <div class="category">
                 <div class="category-item">
-                    <input type="radio" id="genre1" name="genre" class="category-radio">
+                    <input type="checkbox" id="genre1" name="genre" class="category-checkbox">
                     <label for="genre1" class="category-label">총류(백과사전 및 언론)</label>
                 </div>
                 <div class="category-item">
-                    <input type="radio" id="genre2" name="genre" class="category-radio">
+                    <input type="checkbox" id="genre2" name="genre" class="category-checkbox">
                     <label for="genre2" class="category-label">언어</label>
                 </div>
                 <div class="category-item">
-                    <input type="radio" id="genre3" name="genre" class="category-radio">
+                    <input type="checkbox" id="genre3" name="genre" class="category-checkbox">
                     <label for="genre3" class="category-label">예술 및 오락</label>
                 </div>
                 <div class="category-item">
-                    <input type="radio" id="genre4" name="genre" class="category-radio">
+                    <input type="checkbox" id="genre4" name="genre" class="category-checkbox">
                     <label for="genre4" class="category-label">문학</label>
                 </div>
                 <div class="category-item">
-                    <input type="radio" id="genre5" name="genre" class="category-radio">
+                    <input type="checkbox" id="genre5" name="genre" class="category-checkbox">
                     <label for="genre5" class="category-label">역사 및 지리</label>
                 </div>
                 <div class="category-item">
-                    <input type="radio" id="genre6" name="genre" class="category-radio">
+                    <input type="checkbox" id="genre6" name="genre" class="category-checkbox">
                     <label for="genre6" class="category-label">아동 도서</label>
                 </div>
                 <div class="category-item">
-                    <input type="radio" id="genre7" name="genre" class="category-radio">
+                    <input type="checkbox" id="genre7" name="genre" class="category-checkbox">
                     <label for="genre7" class="category-label">청소년 도서</label>
                 </div>
                 <div class="category-item">
-                    <input type="radio" id="genre8" name="genre" class="category-radio">
+                    <input type="checkbox" id="genre8" name="genre" class="category-checkbox">
                     <label for="genre8" class="category-label">비문학</label>
                 </div>
                 <div class="category-item">
-                    <input type="radio" id="genre9" name="genre" class="category-radio">
+                    <input type="checkbox" id="genre9" name="genre" class="category-checkbox">
                     <label for="genre9" class="category-label">만화</label>
                 </div>
                 <div class="category-item">
-                    <input type="radio" id="genre10" name="genre" class="category-radio">
+                    <input type="checkbox" id="genre10" name="genre" class="category-checkbox">
                     <label for="genre10" class="category-label">사회과학</label>
                 </div>
                 <div class="category-item">
-                    <input type="radio" id="genre11" name="genre" class="category-radio">
+                    <input type="checkbox" id="genre11" name="genre" class="category-checkbox">
                     <label for="genre11" class="category-label">종교</label>
                 </div>
                 <div class="category-item">
-                    <input type="radio" id="genre12" name="genre" class="category-radio">
+                    <input type="checkbox" id="genre12" name="genre" class="category-checkbox">
                     <label for="genre12" class="category-label">철학 및 심리학</label>
                 </div>
             </div>
@@ -87,13 +87,13 @@
         const db = firebase.firestore();
 
         document.querySelector('.button').addEventListener('click', () => {
-            const selectedGenre = document.querySelector('input[name="genre"]:checked');
-            if (!selectedGenre) {
-                alert('장르를 선택해주세요.');
+            const selectedGenres = document.querySelectorAll('input[name="genre"]:checked');
+            if (selectedGenres.length === 0 || selectedGenres.length > 3) {
+                alert('장르를 최소 1개에서 최대 3개까지 선택해주세요.');
                 return;
             }
 
-            const genre = selectedGenre.nextElementSibling.textContent;
+            const genres = Array.from(selectedGenres).map(checkbox => checkbox.nextElementSibling.textContent);
 
             // Retrieve user info from localStorage
             const userInfo = JSON.parse(localStorage.getItem('user_info'));
@@ -112,7 +112,7 @@
                             birthdate: userInfo.birthdate,
                             region: userInfo.region,
                             gender: userInfo.gender,
-                            genre: genre
+                            genres: genres
                         }).then(() => {
                             alert('회원가입이 완료되었습니다.');
                             // Clear user info from localStorage
@@ -132,4 +132,5 @@
     </script>
 </body>
 </html>
+
 

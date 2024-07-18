@@ -71,7 +71,7 @@ body, html {
 }
 
 .input-field {
-    width: 100%;
+    width: calc(100% - 15px); /* 가로 길이 1px 줄이기 */
     height: 40px;
     padding: 8px;
     background: #FFFFFF; /* 흰 배경으로 설정 */
