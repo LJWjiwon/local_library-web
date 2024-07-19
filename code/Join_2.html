@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선호하는 장르 선택</title>
+    <link rel="stylesheet" href="../css/Join_2.css">
+    <!-- Firebase App (the core Firebase SDK) -->
+    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-firestore.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img class="logo" src="https://s3-alpha-sig.figma.com/img/fff2/f359/3ab693c88be03877cd78d5ab2a6d04e5?Expires=1721606400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=dGuzYW4DUG0iw6auKz63Q4ExL34rEa8LIBEqBzHF1g~NikKAjnOKmLL5QUunRyECiNUZ7kC7Ux4SBYqQnCc49TBzSwMd-WvQBcT3AqA~4g3SQzC5zFWFdKjh-1sY1lSC96e7WbOmwlqwkVzZAIozKBXpBO-x5mm6GTgXx-aCr2GQcxGySS0VaxTcf48k77cL6PvF4j2vLHlj9rFWpqvVNTxSRnQBn55zMvHwSon4fS~Uq8rpkAMYBikgbwKMUcLFkpjrzRnKx0amfA2Ht4Ad5hMaZvj5paPWjWBTIajC7t3mZfzi53CnVBsYjKP2bmD0fI8hwPjE6vtqMAZVdTc7zA__" alt="Logo">
+            <div class="section-title">선호하는 장르를 선택해주세요.</div>
+            <div class="category">
+                <div class="category-item">
+                    <input type="checkbox" id="genre1" name="genre" class="category-checkbox">
+                    <label for="genre1" class="category-label">총류(백과사전 및 언론)</label>
+                </div>
+                <div class="category-item">
+                    <input type="checkbox" id="genre2" name="genre" class="category-checkbox">
+                    <label for="genre2" class="category-label">언어</label>
+                </div>
+                <div class="category-item">
+                    <input type="checkbox" id="genre3" name="genre" class="category-checkbox">
+                    <label for="genre3" class="category-label">예술 및 오락</label>
+                </div>
+                <div class="category-item">
+                    <input type="checkbox" id="genre4" name="genre" class="category-checkbox">
+                    <label for="genre4" class="category-label">문학</label>
+                </div>
+                <div class="category-item">
+                    <input type="checkbox" id="genre5" name="genre" class="category-checkbox">
+                    <label for="genre5" class="category-label">역사 및 지리</label>
+                </div>
+                <div class="category-item">
+                    <input type="checkbox" id="genre6" name="genre" class="category-checkbox">
+                    <label for="genre6" class="category-label">아동 도서</label>
+                </div>
+                <div class="category-item">
+                    <input type="checkbox" id="genre7" name="genre" class="category-checkbox">
+                    <label for="genre7" class="category-label">청소년 도서</label>
+                </div>
+                <div class="category-item">
+                    <input type="checkbox" id="genre8" name="genre" class="category-checkbox">
+                    <label for="genre8" class="category-label">비문학</label>
+                </div>
+                <div class="category-item">
+                    <input type="checkbox" id="genre9" name="genre" class="category-checkbox">
+                    <label for="genre9" class="category-label">만화</label>
+                </div>
+                <div class="category-item">
+                    <input type="checkbox" id="genre10" name="genre" class="category-checkbox">
+                    <label for="genre10" class="category-label">사회과학</label>
+                </div>
+                <div class="category-item">
+                    <input type="checkbox" id="genre11" name="genre" class="category-checkbox">
+                    <label for="genre11" class="category-label">종교</label>
+                </div>
+                <div class="category-item">
+                    <input type="checkbox" id="genre12" name="genre" class="category-checkbox">
+                    <label for="genre12" class="category-label">철학 및 심리학</label>
+                </div>
+            </div>
+            <div class="button-container">
+                <button class="button">완료</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_PROJECT_ID.appspot.com",
+            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+
+        document.querySelector('.button').addEventListener('click', () => {
+            const selectedGenres = document.querySelectorAll('input[name="genre"]:checked');
+            if (selectedGenres.length === 0 || selectedGenres.length > 3) {
+                alert('장르를 최소 1개에서 최대 3개까지 선택해주세요.');
+                return;
+            }
+
+            const genres = Array.from(selectedGenres).map(checkbox => checkbox.nextElementSibling.textContent);
+
+            // Retrieve user info from localStorage
+            const userInfo = JSON.parse(localStorage.getItem('user_info'));
+
+            if (userInfo) {
+                firebase.auth().createUserWithEmailAndPassword(userInfo.email, userInfo.password)
+                    .then(userCredential => {
+                        // User registered successfully
+                        const user = userCredential.user;
+
+                        // Save user info to Firestore
+                        db.collection('users').doc(user.uid).set({
+                            name: userInfo.name,
+                            email: userInfo.email,
+                            phone: userInfo.phone,
+                            birthdate: userInfo.birthdate,
+                            region: userInfo.region,
+                            gender: userInfo.gender,
+                            genres: genres
+                        }).then(() => {
+                            alert('회원가입이 완료되었습니다.');
+                            // Clear user info from localStorage
+                            localStorage.removeItem('user_info');
+                            // Redirect to another page or clear the form
+                        }).catch(error => {
+                            console.error('Error writing document: ', error);
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Error creating user: ', error);
+                    });
+            } else {
+                alert('사용자 정보를 찾을 수 없습니다.');
+            }
+        });
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도서검색</title>
+    <link href="/css/Book_detail.css" rel="stylesheet">
+</head>
+<body>
+    <div class="frame">
+        <div class="top-bar">
+            <img class="logo" src="/images/logo.png" />
+            <form class="search-bar" action="" method="get">
+                <input class="search-txt" type="text" name="" placeholder="검색어를 입력하세요.">
+                <button class="search-button" type="submit">
+                    <image class="search-icon" src="/images/Search.png"></image>
+                </button>
+            </form>
+            <div class="button-frame">
+                <button class="login-button">
+                    <div class="login_btn-txt">로그인</div>
+                </button>
+                <button class="join-button">
+                    <div class="join_btn-txt">회원가입</div>
+                </button>
+            </div>
+        </div>
+        <div class="page-body">
+            <div class="library-selected">
+                <p>서울 특별시 > 강서구 > 강동구립천호도서관</p>
+            </div>
+            <div class="book-top-frame">
+                <div class="book-image_frame">
+                    <div class="book-image"></div>
+                </div>                    
+                <div class="title_progress">
+                    <h1>파우스트</h1>
+                    <div class="heart_frame">
+                        <input type="checkbox" id="heart_check">
+                                <label for="heart_check">
+                                    <img src="/images/heart.png">
+                                </label>
+                    </div>
+                    <div style="clear: both;"><sub>괴테 원작 / 김영훈 글 / 이윤균 그림</sub></div>
+                    <p>독서진행도</p>
+                    <div class="book-progress_frame">
+                        <div class="reading-button_frame">
+                            <input type="checkbox" id="check1">
+                                <label for="check1">
+                                    <img src="/images/book_reading.png">
+                                </label>
+                            <span>읽는중</span>
+                        </div>
+                        <div class="closed-button_frame">
+                            <input type="checkbox" id="check2">
+                                <label for="check2">
+                                    <img src="/images/book_closed.png">
+                                </label>
+                            <span>다읽음</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info_frame">
+                <div class="book-introduction">
+                    <input type="checkbox" id="tab1">
+                    <label for="tab1">
+                        책 소개
+                    </label>
+                    <div class="book-content">
+                        <p>괴테 탄생 250주년을 맞이하여 민음사에서 펴낸 괴테 특별선 중 파우스트 부분. 전 2권으로 구성되어 있다. 자연 연구가, 미술가였으며, 자신의 공국에 봉사한 정치 지도자이기도 했던 괴테. 후세에는 자유에의 의무, 낯설고 이질적인 것에 대한 긍정심, 존재하는 것에 대한 감사함. 그리고 장래의 것에 대한 비판적 개방성을 가르쳐준 현인으로서 많은 저작을 남긴 괴테의 대표작 파우스트를 완역판으로 만나는 기쁨을 느낄 수 있다.</p>
+                    </div>
+                </div>
+                <div class="list-frame">
+                    <div style="align-self: stretch; height: 34px; padding-top: 8px; padding-bottom: 4px; padding-left: 16px; padding-right: 16px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                        <div style="align-self: stretch; color: #1E1E1E; font-size: 16px; font-family: Inter; font-weight: 600; line-height: 22.40px; word-wrap: break-word">책 소장 도서관 목록</div>
+                    </div>
+                    <div style="align-self: stretch; height: 17px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; flex-direction: column; justify-content: center; align-items: center; display: flex">
+                        <div style="align-self: stretch; height: 1px; background: #D9D9D9"></div>
+                    </div>
+                    <div style="align-self: stretch; height: 210px; border-radius: 8px; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                        <div style="width: 285px; padding-left: 16px; padding-right: 16px; padding-top: 12px; padding-bottom: 12px; border-radius: 8px; overflow: hidden; justify-content: flex-start; align-items: flex-start; gap: 12px; display: inline-flex">
+                            <div style="width: 20px; height: 20px; position: relative">
+                                <div style="width: 15.83px; height: 15px; left: 2.50px; top: 2.50px; position: absolute; border: 2px #1E1E1E solid"></div>
+                            </div>
+                            <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: inline-flex">
+                                <div style="align-self: stretch; justify-content: space-between; align-items: center; display: inline-flex">
+                                    <div style="flex: 1 1 0; color: #1E1E1E; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 22.40px; word-wrap: break-word">Menu Label</div>
+                                </div>
+                                <div style="align-self: stretch; color: #757575; font-size: 14px; font-family: Inter; font-weight: 400; line-height: 19.60px; word-wrap: break-word">주변 지역 도서관</div>
+                            </div>
+                        </div>
+                        <div style="align-self: stretch; padding-left: 16px; padding-right: 16px; padding-top: 12px; padding-bottom: 12px; border-radius: 8px; overflow: hidden; justify-content: flex-start; align-items: flex-start; gap: 12px; display: inline-flex">
+                            <div style="width: 20px; height: 20px; position: relative">
+                                <div style="width: 15.83px; height: 15px; left: 2.50px; top: 2.50px; position: absolute; border: 2px #1E1E1E solid"></div>
+                            </div>
+                            <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: inline-flex">
+                                <div style="align-self: stretch; justify-content: space-between; align-items: center; display: inline-flex">
+                                    <div style="flex: 1 1 0; color: #1E1E1E; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 22.40px; word-wrap: break-word">Menu Label</div>
+                                </div>
+                                <div style="align-self: stretch; color: #757575; font-size: 14px; font-family: Inter; font-weight: 400; line-height: 19.60px; word-wrap: break-word">주변 지역 도서관</div>
+                            </div>
+                        </div>
+                        <div style="align-self: stretch; padding-left: 16px; padding-right: 16px; padding-top: 12px; padding-bottom: 12px; border-radius: 8px; overflow: hidden; justify-content: flex-start; align-items: flex-start; gap: 12px; display: inline-flex">
+                            <div style="width: 20px; height: 20px; position: relative">
+                                <div style="width: 15.83px; height: 15px; left: 2.50px; top: 2.50px; position: absolute; border: 2px #1E1E1E solid"></div>
+                            </div>
+                            <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: inline-flex">
+                                <div style="align-self: stretch; justify-content: space-between; align-items: center; display: inline-flex">
+                                    <div style="flex: 1 1 0; color: #1E1E1E; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 22.40px; word-wrap: break-word">Menu Label</div>
+                                </div>
+                                <div style="align-self: stretch; color: #757575; font-size: 14px; font-family: Inter; font-weight: 400; line-height: 19.60px; word-wrap: break-word">주변 지역 도서관</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="align-self: stretch; height: 17px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; border-radius: 8px; flex-direction: column; justify-content: center; align-items: center; display: flex">
+                        <div style="align-self: stretch; height: 1px; background: #D9D9D9"></div>
+                    </div>
+                    <div style="align-self: stretch; height: 92px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                        <div style="align-self: stretch; padding-left: 16px; padding-right: 16px; padding-top: 12px; padding-bottom: 12px; border-radius: 8px; overflow: hidden; justify-content: flex-start; align-items: flex-start; gap: 12px; display: inline-flex">
+                            <div style="width: 20px; height: 20px; position: relative">
+                                <div style="width: 15px; height: 15px; left: 2.50px; top: 2.50px; position: absolute; border: 2px #1E1E1E solid"></div>
+                            </div>
+                            <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: inline-flex">
+                                <div style="align-self: stretch; justify-content: space-between; align-items: center; display: inline-flex">
+                                    <div style="flex: 1 1 0; color: #1E1E1E; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 22.40px; word-wrap: break-word">Menu Label</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="width: 285px; padding-left: 16px; padding-right: 16px; padding-top: 12px; padding-bottom: 12px; border-radius: 8px; overflow: hidden; justify-content: flex-start; align-items: flex-start; gap: 12px; display: inline-flex">
+                            <div style="width: 20px; height: 20px; position: relative">
+                                <div style="width: 15px; height: 15px; left: 2.50px; top: 2.50px; position: absolute; border: 2px #1E1E1E solid"></div>
+                            </div>
+                            <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: inline-flex">
+                                <div style="align-self: stretch; justify-content: space-between; align-items: center; display: inline-flex">
+                                    <div style="flex: 1 1 0; color: #1E1E1E; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 22.40px; word-wrap: break-word">Menu Label</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
+                    
+                <!--
+                <div class="library-list_frame">
+                    <h3>책 소장 도서관 목록</h3>
+                    <div class="List">
+                        <ul>
+                            <dt>00 도서관</dt>
+                            <dd>주변 지역 도서관</dd>
+                            <dt>사과 도서관</dt>
+                            <li>참외 도서관</li>
+                            <sub>주변 지역 도서관</sub>
+                            <li>과일 도서관</li>
+                        </ul>
+                    </div>
+                </div>
+            -->
+            </div>
+            <div class="reviews_frame">
+                <h2>reiviews</h2>
+                <div class="reviews-card_frame">
+                    <div class="review-card_frame">
+                        <div class="star_frame">
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                        </div>
+                        <h3>독서가좋아졌어요</h3>
+                        <p>너무 재밌고 유익해서 독서가 좋아졌어요!강추</p>
+                        <div class="writer">
+                            <div class="writer-image_frame">
+                                <img src="https://via.placeholder.com/40x40" />
+                            </div>
+                            <div class="writer-info_frame">
+                                <div class="user-name">추천</div>
+                                <div class="date">2024-07-17</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card_frame">
+                        <div class="star_frame">
+                            <span>★</span>
+                        </div>
+                        <h3>재미없음</h3>
+                        <p>너무 어렵고 재미없음</p>
+                        <div class="writer">
+                            <div class="writer-image_frame">
+                                <img src="https://via.placeholder.com/40x40" />
+                            </div>
+                            <div class="writer-info_frame">
+                                <div class="user-name">칠성사이다</div>
+                                <div class="date">2022-07-17</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card_frame">
+                        <div class="star_frame">
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                        </div>
+                        <h3>권장도서라서 읽었는데</h3>
+                        <p>나한텐 별 도움 안됨</p>
+                        <div class="writer">
+                            <div class="writer-image_frame">
+                                <img src="https://via.placeholder.com/40x40" />
+                            </div>
+                            <div class="writer-info_frame">
+                                <div class="user-name">해야</div>
+                                <div class="date">2024-07-19</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card_frame">
+                        <div class="star_frame">
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                        </div>
+                        <h3>독서왕</h3>
+                        <p>꼭 읽어야하는 도서!한번쯤은 읽어보시길</p>
+                        <div class="writer">
+                            <div class="writer-image_frame">
+                                <img src="https://via.placeholder.com/40x40" />
+                            </div>
+                            <div class="writer-info_frame">
+                                <div class="user-name">독자</div>
+                                <div class="date">2030-07-07</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="footer_frame">
+            <nav class="tab-bar_frame">
+                <ul>
+                    <li><a href="#">
+                        <image src="/images/List.png"></image>
+                        <p>도서관정보</p>
+                    </a></li>
+                    <li><a href="#">
+                        <image src="/images/Search.png"></image>
+                        <p>통합검색</p>
+                    </a></li>
+                    <li><a href="#">
+                        <image src="/images/Home.png"></image>    
+                        <p>메인화면</p>
+                    </a></li>
+                    <li><a href="#">
+                        <image src="/images/User.png"></image>
+                        <p>프로필</p>
+                    </a></li>
+                    <li><a href="#">
+                        <image src="/images/Star.png"></image>
+                        <p>랭킹</p>
+                    </a></li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+</body>
+</html>
