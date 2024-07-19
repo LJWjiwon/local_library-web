@@ -60,7 +60,7 @@
                     <div class="profile_row">
                         <span class="label">거&nbsp;주&nbsp;지</span>
                         <span class="value">부산광역시 부산진구</span>
-                        <button class="edit_button">수정하기</button>
+                        <button class="edit_button address_edit_button">수정하기</button>
                     </div>
                     <div class="profile_row">
                         <span class="label">선호장르</span>
@@ -71,7 +71,6 @@
                 <button class="complete_button">완료</button>
             </div>
         </div>
-        <!-- Footer Section -->
         <div id="footer">
             <div id="footer_in">
                 <div class="footer_item">
@@ -96,7 +95,30 @@
                 </div>
             </div>
         </div>
-    </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <h2>주소 수정</h2>
+                <div class="modal-row">
+                    <label for="sido">시/도:</label>
+                    <select id="sido" class="select_field">
+                        <option value="서울특별시">서울특별시</option>
+                        <option value="부산광역시">부산광역시</option>
+                        <option value="대구광역시">대구광역시</option>
+                    </select>
+                </div>
+                <div class="modal-row">
+                    <label for="sigungu">시/군/구:</label>
+                    <select id="sigungu" class="select_field">
+                        <option value="부산진구">부산진구</option>
+                        <option value="해운대구">해운대구</option>
+                        <option value="서구">서구</option>
+                    </select>
+                </div>
+                <button id="save_button" class="save_button">저장</button>
+                <button id="cancel_button" class="cancel_button">취소</button>
+            </div>
+        </div>
+    <script src='/js/profile_edit.js'></script>
 </body>
 
 </html>
