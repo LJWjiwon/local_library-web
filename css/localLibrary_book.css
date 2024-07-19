@@ -494,6 +494,12 @@ input[type="checkbox"]:checked+label::after {
     word-wrap: break-word
 }
 
+
+
+
+
+
+
 /* 하단 메뉴바 */
 
 .footer_frame {
