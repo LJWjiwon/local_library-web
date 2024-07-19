@@ -106,10 +106,9 @@
 }
 
 .mainlogo{
-    width: 40%;
-    height: 30%;
+    width: 700px;
+    height: 300px;
     margin: auto;
-    background-color: aqua;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
