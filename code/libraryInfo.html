@@ -7,95 +7,76 @@
     <link href="/css/libraryInfo.css" rel="stylesheet">
 </head>
 <body>
-    <div class="frame">
-        <div class="top-bar">
-            <img class="logo" src="/images/logo.png" />
-            <form class="search-bar" action="" method="get">
-                <input class="search-txt" type="text" name="" placeholder="검색어를 입력하세요.">
-                <button class="search-button" type="submit">
+    <div class="top-bar">
+        <img class="logo" src="/images/logo.png" />
+        <form class="search-bar" action="" method="get">
+            <input class="search-txt" type="text" name="" placeholder="검색어를 입력하세요(책 명, 출판사, 키워드 등)">
+            <button class="search-button" type="submit">
+                <image class="search-icon" src="/images/Search.png"></image>
+            </button>
+        </form>
+        <div class="button-frame">
+            <button class="login-button">
+                <div class="login_btn-txt">로그인</div>
+            </button>
+            <button class="join-button">
+                <div class="join_btn-txt">회원가입</div>
+            </button>
+        </div>
+    </div>
+    <nav>
+        <li><a href="#">홈</a></li>
+        <li><a href="#">이용안내</a></li>
+        <li class="menu-fixed"><a href="#">도서관 정보</a></li>
+        <li><a href="#">추천도서</a></li>
+        <li><a href="#">회원 혜택</a></li>
+        <li><a href="#">FAQ</a></li>
+    </nav> 
+    <div class="page-body">
+        <div class="select-frame">
+            <div class="select-div">
+                <div class="select-txt">행정구역 선택</div>
+                <button class="dropdown-btn">
+                    <div class="dropdown-txt">시/도</div>
+                    <div class="dropdown-icon">
+                        <image class="dropdown-icon_image" src="/images/dropdown_button.png"></image>
+                    </div>
+                </button>
+            </div>
+            <div class="select-div">
+                <div class="select-txt">지역 선택</div>
+                <button class="dropdown-btn">
+                    <div class="dropdown-txt">시/군/구</div>
+                    <div class="dropdown-icon">
+                        <image class="dropdown-icon_image" src="/images/dropdown_button.png"></image>
+                    </div>
+                </button>
+            </div>
+            <div class="select-div">
+                <div class="select-txt">도서관 선택</div>
+                <button class="dropdown-btn">
+                    <div class="dropdown-txt">도서관선택</div>
+                    <div class="dropdown-icon">
+                        <image class="dropdown-icon_image" src="/images/dropdown_button.png"></image>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <div class="map-frame"></div>
+        <h1>00도서관</h1>
+        <sub>공공도서관 / 작은 도서관</sub>
+        <div class="bookSearch-frame">
+            <b>도서관 내 소장도서 검색</b>
+            <form class="book_search-bar" action="" method="get">
+                <input type="text" name="" placeholder="책 이름 검색">
+                <button type="submit">
                     <image class="search-icon" src="/images/Search.png"></image>
                 </button>
             </form>
-            <div class="button-frame">
-                <button class="login-button">
-                    <div class="login_btn-txt">로그인</div>
-                </button>
-                <button class="join-button">
-                    <div class="join_btn-txt">회원가입</div>
-                </button>
-            </div>
         </div>
-        <div class="page-body">
-            <div class="select-frame">
-                <div class="select-div">
-                    <div class="select-txt">행정구역 선택</div>
-                    <button class="dropdown-btn">
-                        <div class="dropdown-txt">시/도</div>
-                        <div class="dropdown-icon">
-                            <image class="dropdown-icon_image" src="/images/dropdown_button.png"></image>
-                        </div>
-                    </button>
-                </div>
-                <div class="select-div">
-                    <div class="select-txt">지역 선택</div>
-                    <button class="dropdown-btn">
-                        <div class="dropdown-txt">시/군/구</div>
-                        <div class="dropdown-icon">
-                            <image class="dropdown-icon_image" src="/images/dropdown_button.png"></image>
-                        </div>
-                    </button>
-                </div>
-                <div class="select-div">
-                    <div class="select-txt">도서관 선택</div>
-                    <button class="dropdown-btn">
-                        <div class="dropdown-txt">도서관선택</div>
-                        <div class="dropdown-icon">
-                            <image class="dropdown-icon_image" src="/images/dropdown_button.png"></image>
-                        </div>
-                    </button>
-                </div>
-            </div>
-            <div class="map-frame"></div>
-            <h1>00도서관</h1>
-            <sub>공공도서관 / 작은 도서관</sub>
-            <div class="bookSearch-frame">
-                <b>도서관 내 소장도서 검색</b>
-                <form class="book_search-bar" action="" method="get">
-                    <input type="text" name="" placeholder="책 검색">
-                    <button type="submit">
-                        <image class="search-icon" src="/images/Search.png"></image>
-                    </button>
-                </form>
-            </div>
-            <div class="content"><br/>주소: <br/>우편번호: <br/>전화번호: <br/>개관시간: <br/>휴관일: <br/></div>
-        </div>
-        <footer class="footer_frame">
-            <nav class="tab-bar_frame">
-                <ul>
-                    <li><a href="#">
-                        <image src="/images/List.png"></image>
-                        <p>도서관정보</p>
-                    </a></li>
-                    <li><a href="#">
-                        <image src="/images/Search.png"></image>
-                        <p>통합검색</p>
-                    </a></li>
-                    <li><a href="#">
-                        <image src="/images/Home.png"></image>    
-                        <p>메인화면</p>
-                    </a></li>
-                    <li><a href="#">
-                        <image src="/images/User.png"></image>
-                        <p>프로필</p>
-                    </a></li>
-                    <li><a href="#">
-                        <image src="/images/Star.png"></image>
-                        <p>랭킹</p>
-                    </a></li>
-                </ul>
-            </nav>
-        </footer>
-    </div>
+        <div class="content"><br/>주소: <br/>우편번호: <br/>전화번호: <br/>개관시간: <br/>휴관일: <br/></div>
+    </div>    
+    <script src="/js/libraryInfo.js"></script>
 </body>
 </html>
 
