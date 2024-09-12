@@ -39,17 +39,17 @@
                     <label for="lang">행정구역 선택</label>
                     <select>
                         <option disabled hidden selected>시/도</option>
-                        <option value="javascript">JavaScript</option>
-                        <option value="php">PHP</option>
-                        <option value="java">Java</option>
-                        <option value="golang">Golang</option>
-                        <option value="python">Python</option>
-                        <option value="c#">C#</option>
-                        <option value="C++">C++</option>
-                        <option value="erlang">Erlang</option>
+                        <option value="javascript">하나</option>
+                        <option value="php">둘</option>
+                        <option value="java">셋</option>
+                        <option value="golang">넷</option>
+                        <option value="python">다섯</option>
+                        <option value="c#">여섯</option>
+                        <option value="C++">일곱</option>
+                        <option value="erlang">여덞</option>
                     </select>
                 </form>
-            </div>
+            </div>    
             <div class="select-div">
                 <form action="#">
                     <label for="lang">지역 선택</label>
@@ -83,7 +83,8 @@
                 </form>
             </div>
         </div>
-        <div class="map-frame"></div>
+        <div id="map"></div>
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=99d0f668557063227ed3ede046e27469"></script>
         <h1>00도서관</h1>
         <sub>공공도서관 / 작은 도서관</sub>
         <div class="bookSearch-frame">
